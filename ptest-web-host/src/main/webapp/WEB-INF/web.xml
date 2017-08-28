@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/beans.xml</param-value>
+    </context-param>
+
+    <!--========================================================
+    Listener used to handle incoming http requests.
+    =========================================================-->
+    <listener>
+        <listener-class>
+            com.kareo.library.servercore.spring.context.SpringDestroyingServletContextListener
+        </listener-class>
+    </listener>
+
+    <!-- =======================================================
+    The servlet we will be running is declared here.
+    =========================================================-->
+    <servlet>
+        <servlet-name>CXFServlet</servlet-name>
+        <servlet-class>
+            org.apache.cxf.transport.servlet.CXFServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--=========================================================
+    Mapping of our servlet to a given url subpath to handle requests
+    ==========================================================-->
+    <servlet-mapping>
+        <servlet-name>CXFServlet</servlet-name>
+        <url-pattern>/api/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
