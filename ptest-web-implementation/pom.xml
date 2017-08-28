@@ -9,7 +9,7 @@
     <artifactId>ptest-web-implementation</artifactId>
     <packaging>jar</packaging>
 
-    <name>ptestImplementation</name>
+    <name>ptest-web-implementation</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
