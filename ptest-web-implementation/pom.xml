@@ -6,7 +6,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ptestImplementation</artifactId>
+    <artifactId>ptest-web-implementation</artifactId>
     <packaging>jar</packaging>
 
     <name>ptestImplementation</name>

@@ -6,7 +6,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ptestContract</artifactId>
+    <artifactId>ptest-web-contract</artifactId>
     <packaging>jar</packaging>
     <name>ptestContract</name>
     <url>http://maven.apache.org</url>
