@@ -6,7 +6,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ptestHost</artifactId>
+    <artifactId>ptest-web-host</artifactId>
     <version>Dev-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>ptest-web-host</name>
@@ -26,8 +26,12 @@
         <dependency>
             <groupId>ptest</groupId>
             <version>1.0-SNAPSHOT</version>
-            <artifactId>ptest-web-contract</artifactId>
-            <scope>runtime</scope>
+            <artifactId>ptest-web-implementation</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ptest</groupId>
+            <version>1.0-SNAPSHOT</version>
+            <artifactId>ptest-web-repository</artifactId>
         </dependency>
     </dependencies>
     <build>

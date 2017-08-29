@@ -13,6 +13,21 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
+        <!-- ********************************************************
+        Standard module dependencies within this solution for this
+        module. You should NOT have to change these dependencies.
+        **********************************************************-->
+        <dependency>
+            <groupId>ptest</groupId>
+            <version>1.0-SNAPSHOT</version>
+            <artifactId>ptest-web-contract</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>ptest</groupId>
+            <version>1.0-SNAPSHOT</version>
+            <artifactId>ptest-web-repository</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

@@ -1,4 +1,4 @@
-package main.com.datacontracts;
+package contracts.data;
 
 public class Inputs
 {

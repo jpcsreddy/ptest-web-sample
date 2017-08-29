@@ -15,4 +15,29 @@
                http://cxf.apache.org/schemas/core.xsd">
     <context:property-placeholder location="classpath:config.properties"/>
     <context:annotation-config/>
+
+    <!-- =================================================================================
+    Setup JaxRS service object beans.  These are the objects that will be hosted as
+    endpoints by JaxRS
+    You will not normally have to change these entries.
+    ====================================================================================-->
+    <jaxrs:server address="/">
+        <jaxrs:serviceBeans>
+            <bean class="implementations.AllOperationsServiceImpl">
+                <constructor-arg index="0" ref="${author.name}"/>
+            </bean>
+            <bean id="swaggerResourceJSON" class="swagger.AllOperationsSwagger">
+            <!--To DO-->
+            </bean>
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider">
+                <property name="mapper" ref="jacksonObjectMapper"/>
+            </bean>
+
+            <!--Swagger related providers -->
+            <bean id="resourceWriter" class="com.wordnik.swagger.jaxrs.listing.ResourceListingProvider" />
+            <bean id="apiWriter" class="com.wordnik.swagger.jaxrs.listing.ApiDeclarationProvider" />
+        </jaxrs:providers>
+    </jaxrs:server>
 </beans>
