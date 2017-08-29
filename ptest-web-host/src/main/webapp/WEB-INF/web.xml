@@ -15,9 +15,7 @@
     Listener used to handle incoming http requests.
     =========================================================-->
     <listener>
-        <listener-class>
-            com.kareo.library.servercore.spring.context.SpringDestroyingServletContextListener
-        </listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
     <!-- =======================================================

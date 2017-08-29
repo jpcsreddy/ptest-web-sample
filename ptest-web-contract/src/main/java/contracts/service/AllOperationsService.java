@@ -1,4 +1,6 @@
 package contracts.service;
+import contracts.data.User;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
@@ -10,7 +12,7 @@ public interface AllOperationsService {
     @GET
     @Path("/sayhi2")
     @Produces(MediaType.APPLICATION_JSON)
-    String sayHiTo(@QueryParam("name") String name);
+    User sayHiTo(@QueryParam("name") String name);
 
     @GET
     @Path("/sayhiagain")

@@ -16,6 +16,18 @@
     <context:property-placeholder location="classpath:config.properties"/>
     <context:annotation-config/>
 
+    <bean id="jacksonObjectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+    <bean id="userRepository" class="holdmeindb.UserRepository" >
+        <constructor-arg index="0" ref="mysqlDataSource"/>
+    </bean>
+
+    <bean id="mysqlDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/ptest" />
+        <property name="username" value="chandra" />
+        <property name="password" value="chandra" />
+    </bean>
+
     <!-- =================================================================================
     Setup JaxRS service object beans.  These are the objects that will be hosted as
     endpoints by JaxRS
@@ -24,7 +36,7 @@
     <jaxrs:server address="/">
         <jaxrs:serviceBeans>
             <bean class="implementations.AllOperationsServiceImpl">
-                <constructor-arg index="0" ref="${author.name}"/>
+                <constructor-arg index="0" value="${author.name}"/>
             </bean>
             <bean id="swaggerResourceJSON" class="swagger.AllOperationsSwagger">
             <!--To DO-->

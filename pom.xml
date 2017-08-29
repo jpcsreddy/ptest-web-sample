@@ -30,8 +30,8 @@
               <version>2.4</version>
               <configuration>
                   <warName>ptest-web-sample-restservice</warName>
-                  <warSourceDirectory>ptest-web-host\src\main\webapp\</warSourceDirectory>
-                  <failOnMissingWebXml>false</failOnMissingWebXml>
+                  <!--<warSourceDirectory>ptest-web-host\src\main\webapp\</warSourceDirectory>-->
+                  <!--<failOnMissingWebXml>true</failOnMissingWebXml>-->
               </configuration>
           </plugin>
       </plugins>
@@ -225,6 +225,12 @@
                     <artifactId>commons-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.9</version>
         </dependency>
 
         <!-- ********************************************************
