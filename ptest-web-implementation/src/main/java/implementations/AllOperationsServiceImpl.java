@@ -16,13 +16,12 @@ public class AllOperationsServiceImpl implements AllOperationsService {
     public AllOperationsServiceImpl(String author)
     {
         this.author = author;
-
     }
 
     public User sayHiTo(final String name) {
-        User u = new User();
-        u.setName(name);
-        logger.debug("got hi from" + name);
+        User u = new User(name);
+        logger.debug("said hi from" + name);
+
         return u;
     }
 
